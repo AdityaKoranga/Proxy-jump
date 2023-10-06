@@ -38,3 +38,9 @@ ssh three
 ```
 
 This will first SSH into `four@10.8.0.34` and then from there, it will SSH into `three@192.168.1.185`, all in a single command.
+
+If you want to `ssh-copy-id` using proxy jump then:
+
+```bash
+ssh-copy-id -o 'ProxyJump=four@10.8.0.34' three@192.168.1.185
+```
